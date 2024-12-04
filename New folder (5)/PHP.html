@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan PHP Dasar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Panduan PHP Dasar Menurut SORISFA Adalah</h1>
+        <p>Pelajari dasar-dasar PHP dan buat halaman web dinamis</p>
+    </header>
+
+    <!-- Navigasi -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#what-is-php">Apa Itu PHP?</a></li>
+            <li><a href="#php-syntax">Sintaks PHP</a></li>
+            <li><a href="#contact-form">Formulir Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Konten Utama -->
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>Selamat datang di panduan dasar PHP. PHP adalah bahasa pemrograman server-side yang digunakan untuk membuat halaman web dinamis.</p>
+        </section>
+
+        <section id="what-is-php">
+            <h2>Apa Itu PHP?</h2>
+            <p>PHP (Hypertext Preprocessor) adalah bahasa pemrograman yang berjalan di server dan digunakan untuk mengembangkan aplikasi web.</p>
+        </section>
+
+        <section id="php-syntax">
+            <h2>Sintaks PHP</h2>
+            <p>Contoh sintaks dasar PHP:</p>
+            <pre>
+&lt;?php
+    $name = "John";
+    echo "Halo, " . $name;
+?&gt;
+            </pre>
+        </section>
+
+        <section id="contact-form">
+            <h2>Formulir Kontak</h2>
+            <p>Isi formulir di bawah ini untuk mengirimkan pesan:</p>
+            <form action="process_form.php" method="post" onsubmit="return validateForm()">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Kirim</button>
+            </form>
+            <p id="form-message"></p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Panduan PHP Dasar. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

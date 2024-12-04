@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love for Senggg</title>
+    <style>
+        /* Reset dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Gaya body */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fbe7e6;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Love container */
+        .love-container {
+            text-align: center;
+        }
+
+        /* Hati */
+        .heart {
+            width: 100px;
+            height: 100px;
+            background-color: #ff4d6d;
+            position: relative;
+            transform: rotate(-45deg);
+            animation: beat 1s infinite;
+            margin: 0 auto;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            width: 100px;
+            height: 100px;
+            background-color: #ff4d6d;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .heart::before {
+            top: -50px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 50px;
+            top: 0;
+        }
+
+        /* Animasi berdetak */
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1) rotate(-45deg);
+            }
+            50% {
+                transform: scale(1.1) rotate(-45deg);
+            }
+        }
+
+        /* Pesan cinta */
+        .message {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .signature {
+            font-size: 1.2em;
+            color: #ff4d6d;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="love-container">
+        <div class="heart"></div>
+        <p class="message"><span style="color: #ff4d6d;">Terima Kasih Telah Mengunjungi Web Ini</span> <span style="color: white;">❤️</span></p>
+        <p class="signature">-SEEYOU NEXT TIME</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <h1>Selamat Datang di web <h6>PUFTRE</h6></h1>
+            <p>Tutorial Belajar Membuat Layout Website Sederhana</p>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="home.html"><span style="color: blue;">Home</span></a></li>
+                <li><a href="html.html"><span style="color: blue;">HTML</span></a></li>
+                <li><a href="css.html"><span style="color: blue;">CSS</span></a></li>
+                <li><a href="php.html"><span style="color: blue;">PHP</span></a></li>
+                <li><a href="Javascript.html"><span style="color: blue;">Javascript</span></a></li>
+            </ul>
+        </div>
+        <div class="badan">
+            <div class="sidebar">
+                sidebar
+                <ul>
+                    <li><a href="#"><span style="color: white;">Tutorial HTML dasar</span></a></li>
+                    <li><a href="#"><span style="color: white;">Tutorial CSS dasar</span></a></li>
+                    <li><a href="#"><span style="color: white;">Tutorial PHP dasar</span></a></li>
+                    <li><a href="#"><span style="color: white;">Tutorial JQuery dasar</span></a></li>
+                </ul>
+            </div>
+            <div class="content">
+            </div>
+            <div class="clear"></div>
+            <div class="footer">
+                footer
+            </div>
+        </div>    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            background-color: #333;
+            overflow: hidden;
+        }
+        .particle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: #6c63ff;
+            border-radius: 50%;
+            animation: move 10s infinite linear;
+            opacity: 0.6;
+        }
+        @keyframes move {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+            100% {
+                transform: translateY(-100vh) translateX(calc(100vw * var(--x-move)));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Menambahkan beberapa partikel -->
+    <script>
+        for (let i = 0; i < 100; i++) {
+            let particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.top = `${Math.random() * 100}vh`;
+            particle.style.left = `${Math.random() * 100}vw`;
+            particle.style.setProperty('--x-move', Math.random() - 0.5);
+            particle.style.animationDuration = `${Math.random() * 5 + 5}s`;
+            document.body.appendChild(particle);
+        }
+    </script>
+</body>
+</html>
+       
+    </body>
+</html>
+
+
